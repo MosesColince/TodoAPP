@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
-import 'model/global.dart';
+//import 'package:english_words/english_words.dart';
+import 'package:todoapp/loginscreen/login.dart';
+//import 'model/global.dart';
+import 'loginscreen/login.dart';
+//import 'package:provider/provider.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,17 +15,16 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    // ignore: prefer_const_constructors
     return MaterialApp(
-      title: 'newflutapp',
-      theme: ThemeData(
-        primarySwatch: Colors.teal,
-      ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      title: 'todoapp',
+      debugShowCheckedModeBanner: false,
+      home: LoginScreen(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
+/*class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
 
   final String title;
@@ -34,7 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      color: Colors.deepPurple,
+      color: Colors.white,
       home: SafeArea(
         child: DefaultTabController(
           length: 2,
@@ -69,4 +72,4 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
     );
   }
-}
+}*/
