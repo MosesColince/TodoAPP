@@ -11,34 +11,6 @@ class LoginScreen extends StatefulWidget {
 }
 
 
-
-
-
-Widget buildRememberbutton() {
-  return Container(
-      height: 20,
-      child: Row(children: <Widget>[
-        Theme(
-          data: ThemeData(unselectedWidgetColor: Colors.black),
-          child: Checkbox(
-            value: isRememberMe,
-            checkColor: Colors.blue,
-            activeColor: Colors.black,
-            onChanged: (value) {
-              setState(() {
-                isRememberMe = value;
-              });
-            },
-          ),
-        ),
-        Text("Remeber me",
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              color: Colors.white,
-            )),
-      ]));
-}
-
 class _LoginScreenState extends State<LoginScreen> {
   bool isRememberMe = false;
 Widget buildForgotPassWordButton() {
@@ -133,6 +105,31 @@ Widget buildPassword() {
   );
 }
 
+
+Widget buildRememberbutton() {
+  return Container(
+      height: 20,
+      child: Row(children: <Widget>[
+        Theme(
+          data: ThemeData(unselectedWidgetColor: Colors.black),
+          child: Checkbox(
+            value: isRememberMe,
+            checkColor: Colors.blue,
+            activeColor: Colors.black,
+            onChanged: (value) {
+              setState(() {
+                isRememberMe = value;
+              });
+            },
+          ),
+        ),
+        Text("Remeber me",
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+            )),
+      ]));
+}
   @override
   Widget build(BuildContext context) {
     return Scaffold(
