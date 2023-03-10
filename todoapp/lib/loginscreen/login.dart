@@ -137,7 +137,19 @@ class _LoginScreenState extends State<LoginScreen> {
         elevation: 5,
         onPressed: () => print("Login Pressed"),
         padding: EdgeInsets.all(15),
-      ),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(17)
+        ),
+      color: Colors.black,
+      child: Text(
+        "Login",
+        style: TextStyle(
+          color: Colors.brown,
+          fontSize: 17,
+          fontWeight: FontWeight.bold,
+        ),
+      )
+      )
     );
   }
 
@@ -182,6 +194,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       buildPassword(),
                       buildForgotPassWordButton(),
                       buildRememberbutton(),
+                      buildLoginButton()
                     ],
                   ),
                 ),

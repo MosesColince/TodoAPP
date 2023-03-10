@@ -1,8 +1,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:todoapp/loginscreen/login.dart';
-import 'model/global.dart';
-import 'loginscreen/login.dart';
+//import 'model/global.dart';
+//import 'loginscreen/login.dart';
 
 
 void main() {
