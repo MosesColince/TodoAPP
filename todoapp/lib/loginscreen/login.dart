@@ -10,129 +10,137 @@ class LoginScreen extends StatefulWidget {
   _LoginScreenState createState() => _LoginScreenState();
 }
 
-
 class _LoginScreenState extends State<LoginScreen> {
   bool isRememberMe = false;
-Widget buildForgotPassWordButton() {
-  return Container(
-    alignment: Alignment.centerRight,
-    child: FlatButton(
-      onPressed: () => print("Forgot Password pressed"),
-      padding: EdgeInsets.only(right: 0),
-      child: Text(
-        "Forgot Password?",
-        style: TextStyle(
-          fontWeight: FontWeight.bold,
-          color: Colors.black,
-        ),
-      ),
-    ),
-  );
-}
-
-Widget buildEmail() {
-  return Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: <Widget>[
-      const Text(
-        "Doctor's Licence no",
-        style: TextStyle(
-            color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),
-      ),
-      const SizedBox(height: 10),
-      Container(
-        alignment: Alignment.bottomLeft,
-        decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(12),
-            // ignore: prefer_const_literals_to_create_immutables
-            boxShadow: [
-              const BoxShadow(
-                  color: Colors.black26, blurRadius: 6, offset: Offset(0, 2))
-            ]),
-        height: 60,
-        // ignore: prefer_const_constructors
-        child: TextField(
-          keyboardType: TextInputType.number,
-          style: const TextStyle(color: Colors.black54),
-          decoration: const InputDecoration(
-              border: InputBorder.none,
-              contentPadding: EdgeInsets.only(top: 14),
-              prefixIcon:
-                  Icon(Icons.numbers, color: Color.fromARGB(255, 66, 219, 170)),
-              hintText: "Doctor's Licence no",
-              hintStyle: TextStyle(color: Colors.black45)),
-        ),
-      )
-    ],
-  );
-}
-
-Widget buildPassword() {
-  return Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: <Widget>[
-      const Text(
-        "Password",
-        style: TextStyle(
-            color: Colors.white, fontSize: 17, fontWeight: FontWeight.bold),
-      ),
-      const SizedBox(height: 10),
-      Container(
-        alignment: Alignment.bottomLeft,
-        decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(12),
-            // ignore: prefer_const_literals_to_create_immutables
-            boxShadow: [
-              const BoxShadow(
-                  color: Colors.black26, blurRadius: 6, offset: Offset(0, 2))
-            ]),
-        height: 60,
-        // ignore: prefer_const_constructors
-        child: TextField(
-          obscureText: true,
-          style: const TextStyle(color: Colors.black54),
-          decoration: const InputDecoration(
-              border: InputBorder.none,
-              contentPadding: EdgeInsets.only(top: 14),
-              prefixIcon: Icon(Icons.password, color: Color(0xff3ba1c5)),
-              hintText: 'Password',
-              hintStyle: TextStyle(color: Colors.black45)),
-        ),
-      )
-    ],
-  );
-}
-
-
-Widget buildRememberbutton() {
-  return Container(
-      height: 20,
-      child: Row(children: <Widget>[
-        Theme(
-          data: ThemeData(unselectedWidgetColor: Colors.black),
-          child: Checkbox(
-            value: isRememberMe,
-            checkColor: Colors.blue,
-            activeColor: Colors.black,
-            onChanged: (value) {
-              setState(() {
-                isRememberMe = value!;
-              });
-            },
+  Widget buildForgotPassWordButton() {
+    return Container(
+      alignment: Alignment.centerRight,
+      child: FlatButton(
+        onPressed: () => print("Forgot Password pressed"),
+        padding: EdgeInsets.only(right: 0),
+        child: Text(
+          "Forgot Password?",
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            color: Colors.black,
           ),
         ),
-        Text("Remeber me",
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              color: Colors.white,
-            )
+      ),
+    );
+  }
+
+  Widget buildEmail() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        const Text(
+          "Doctor's Licence no",
+          style: TextStyle(
+              color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),
         ),
-      ]
-    )
-  );
-}
+        const SizedBox(height: 10),
+        Container(
+          alignment: Alignment.bottomLeft,
+          decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(12),
+              // ignore: prefer_const_literals_to_create_immutables
+              boxShadow: [
+                const BoxShadow(
+                    color: Colors.black26, blurRadius: 6, offset: Offset(0, 2))
+              ]),
+          height: 60,
+          // ignore: prefer_const_constructors
+          child: TextField(
+            keyboardType: TextInputType.number,
+            style: const TextStyle(color: Colors.black54),
+            decoration: const InputDecoration(
+                border: InputBorder.none,
+                contentPadding: EdgeInsets.only(top: 14),
+                prefixIcon: Icon(Icons.numbers,
+                    color: Color.fromARGB(255, 66, 219, 170)),
+                hintText: "Doctor's Licence no",
+                hintStyle: TextStyle(color: Colors.black45)),
+          ),
+        )
+      ],
+    );
+  }
+
+  Widget buildPassword() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        const Text(
+          "Password",
+          style: TextStyle(
+              color: Colors.white, fontSize: 17, fontWeight: FontWeight.bold),
+        ),
+        const SizedBox(height: 10),
+        Container(
+          alignment: Alignment.bottomLeft,
+          decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(12),
+              // ignore: prefer_const_literals_to_create_immutables
+              boxShadow: [
+                const BoxShadow(
+                    color: Colors.black26, blurRadius: 6, offset: Offset(0, 2))
+              ]),
+          height: 60,
+          // ignore: prefer_const_constructors
+          child: TextField(
+            obscureText: true,
+            style: const TextStyle(color: Colors.black54),
+            decoration: const InputDecoration(
+                border: InputBorder.none,
+                contentPadding: EdgeInsets.only(top: 14),
+                prefixIcon: Icon(Icons.password, color: Color(0xff3ba1c5)),
+                hintText: 'Password',
+                hintStyle: TextStyle(color: Colors.black45)),
+          ),
+        )
+      ],
+    );
+  }
+
+  Widget buildRememberbutton() {
+    return Container(
+        height: 20,
+        child: Row(children: <Widget>[
+          Theme(
+            data: ThemeData(unselectedWidgetColor: Colors.black),
+            child: Checkbox(
+              value: isRememberMe,
+              checkColor: Colors.blue,
+              activeColor: Colors.black,
+              onChanged: (value) {
+                setState(() {
+                  isRememberMe = value!;
+                });
+              },
+            ),
+          ),
+          Text("Remeber me",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              )),
+        ]));
+  }
+
+  Widget buildLoginButton() {
+    return Container(
+      padding: EdgeInsets.symmetric(vertical: 28),
+      width: double.infinity,
+      child: RaisedButton(
+        elevation: 5,
+        onPressed: () => print("Login Pressed"),
+        padding: EdgeInsets.all(15),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
