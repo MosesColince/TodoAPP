@@ -1,9 +1,9 @@
+
 import 'package:flutter/material.dart';
-import 'package:english_words/english_words.dart';
 import 'package:todoapp/loginscreen/login.dart';
-//import 'model/global.dart';
+import 'model/global.dart';
 import 'loginscreen/login.dart';
-//import 'package:provider/provider.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class MyHomePage extends StatefulWidget {
+/*class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
 
   final String title;
@@ -73,3 +73,4 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+*/
