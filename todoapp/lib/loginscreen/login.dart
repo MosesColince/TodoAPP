@@ -10,42 +10,6 @@ class LoginScreen extends StatefulWidget {
   _LoginScreenState createState() => _LoginScreenState();
 }
 
-Widget buildPassword() {
-  return Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: <Widget>[
-      const Text(
-        "Password",
-        style: TextStyle(
-            color: Colors.white, fontSize: 17, fontWeight: FontWeight.bold),
-      ),
-      const SizedBox(height: 10),
-      Container(
-        alignment: Alignment.bottomLeft,
-        decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(12),
-            // ignore: prefer_const_literals_to_create_immutables
-            boxShadow: [
-              const BoxShadow(
-                  color: Colors.black26, blurRadius: 6, offset: Offset(0, 2))
-            ]),
-        height: 60,
-        // ignore: prefer_const_constructors
-        child: TextField(
-          obscureText: true,
-          style: const TextStyle(color: Colors.black54),
-          decoration: const InputDecoration(
-              border: InputBorder.none,
-              contentPadding: EdgeInsets.only(top: 14),
-              prefixIcon: Icon(Icons.password, color: Color(0xff3ba1c5)),
-              hintText: 'Password',
-              hintStyle: TextStyle(color: Colors.black45)),
-        ),
-      )
-    ],
-  );
-}
 
 
 
@@ -125,6 +89,43 @@ Widget buildEmail() {
               prefixIcon:
                   Icon(Icons.numbers, color: Color.fromARGB(255, 66, 219, 170)),
               hintText: "Doctor's Licence no",
+              hintStyle: TextStyle(color: Colors.black45)),
+        ),
+      )
+    ],
+  );
+}
+
+Widget buildPassword() {
+  return Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: <Widget>[
+      const Text(
+        "Password",
+        style: TextStyle(
+            color: Colors.white, fontSize: 17, fontWeight: FontWeight.bold),
+      ),
+      const SizedBox(height: 10),
+      Container(
+        alignment: Alignment.bottomLeft,
+        decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(12),
+            // ignore: prefer_const_literals_to_create_immutables
+            boxShadow: [
+              const BoxShadow(
+                  color: Colors.black26, blurRadius: 6, offset: Offset(0, 2))
+            ]),
+        height: 60,
+        // ignore: prefer_const_constructors
+        child: TextField(
+          obscureText: true,
+          style: const TextStyle(color: Colors.black54),
+          decoration: const InputDecoration(
+              border: InputBorder.none,
+              contentPadding: EdgeInsets.only(top: 14),
+              prefixIcon: Icon(Icons.password, color: Color(0xff3ba1c5)),
+              hintText: 'Password',
               hintStyle: TextStyle(color: Colors.black45)),
         ),
       )
