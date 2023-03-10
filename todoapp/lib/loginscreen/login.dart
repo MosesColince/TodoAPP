@@ -83,14 +83,38 @@ Widget buildEmail() {
   );
 }
 
-/*Widget buildForgotPassWordButton() {
+Widget buildForgotPassWordButton() {
   return Container(
     alignment: Alignment.centerRight,
     child: FlatButton(
-      onPressed: (() => print("Forgot Password pressed")),
+      onPressed: () => print("Forgot Password pressed"),
+      padding: EdgeInsets.only(right: 0),
+      child: Text(
+        "Forgot Password?",
+        style: TextStyle(
+          fontWeight: FontWeight.bold,
+          color: Colors.black,
+        ),
+      ),
     ),
+  );
+}
+Widget buildRememberbutton(){
+  return Container(
+    height: 20,
+    child: Row(
+      children: <Widget>[
+         ThemeData(unselectedWidgetColor: Colors.black),
+        child: Checkbox(
+          value: isRememberMe,
+          checkColor: Colors.blue,
+          
+        ),
+    )
+      ]
+  ),
   )
-}*/
+}
 
 class _LoginScreenState extends State<LoginScreen> {
   @override
@@ -132,6 +156,8 @@ class _LoginScreenState extends State<LoginScreen> {
                       buildEmail(),
                       SizedBox(height: 20),
                       buildPassword(),
+                      buildForgotPassWordButton(),
+                      buildRememberbutton(),
                     ],
                   ),
                 ),
