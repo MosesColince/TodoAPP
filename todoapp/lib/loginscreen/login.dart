@@ -118,7 +118,7 @@ Widget buildRememberbutton() {
             activeColor: Colors.black,
             onChanged: (value) {
               setState(() {
-                isRememberMe = value;
+                isRememberMe = value!;
               });
             },
           ),
@@ -127,8 +127,11 @@ Widget buildRememberbutton() {
             style: TextStyle(
               fontWeight: FontWeight.bold,
               color: Colors.white,
-            )),
-      ]));
+            )
+        ),
+      ]
+    )
+  );
 }
   @override
   Widget build(BuildContext context) {
