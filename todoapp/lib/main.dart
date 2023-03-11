@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:todoapp/loginscreen/login.dart';
+import 'package:todoapp/loginscreen/doctorlogin.dart';
 //import 'model/global.dart';
 //import 'loginscreen/login.dart';
 
