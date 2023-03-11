@@ -190,8 +190,8 @@ class _LoginScreenState extends State<LoginScreen> {
                         colors: [
                       Color.fromARGB(255, 53, 170, 78),
                       Color.fromARGB(255, 53, 170, 78),
-                     Color.fromARGB(255, 53, 170, 78),
-                     Color.fromARGB(255, 53, 170, 78),
+                      Color.fromARGB(255, 53, 170, 78),
+                      Color.fromARGB(255, 53, 170, 78),
                     ])),
                 child: SingleChildScrollView(
                   physics: AlwaysScrollableScrollPhysics(),
