@@ -143,11 +143,33 @@ class _LoginScreenState extends State<LoginScreen> {
             child: Text(
               "Login",
               style: TextStyle(
-                color: Colors.brown,
+                color: Colors.white,
                 fontSize: 17,
                 fontWeight: FontWeight.bold,
               ),
             )));
+  }
+
+  Widget buildSignUpButton() {
+    return GestureDetector(
+      onTap: () => print("Sign up Pressed"),
+      child: RichText(
+          text: TextSpan(children: [
+        TextSpan(
+            text: "Don't habe an account?",
+            style: TextStyle(
+                fontSize: 17,
+                color: Colors.black,
+                fontWeight: FontWeight.w400)),
+        TextSpan(
+            text: "Sign Up",
+            style: TextStyle(
+              fontSize: 17,
+              color: Colors.black,
+              fontWeight: FontWeight.bold,
+            ))
+      ])),
+    );
   }
 
   @override
@@ -191,7 +213,8 @@ class _LoginScreenState extends State<LoginScreen> {
                       buildPassword(),
                       buildForgotPassWordButton(),
                       buildRememberbutton(),
-                      buildLoginButton()
+                      buildLoginButton(),
+                      buildSignUpButton(),
                     ],
                   ),
                 ),
