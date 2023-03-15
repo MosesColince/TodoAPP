@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:todoapp/loginscreen/doctorlogin.dart';
 import 'model/global.dart';
 import 'loginscreen/doctorlogin.dart';
-import 'loginscreen/patientlogin.dart';
+//import 'loginscreen/patientlogin.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,13 +17,12 @@ class MyApp extends StatelessWidget {
     // ignore: prefer_const_constructors
     return MaterialApp(
       title: 'todoapp',
-      debugShowCheckedModeBanner: false,
-      home: LoginScreen(),
+    
     );
   }
 }
 
-/*class MyHomePage extends StatefulWidget {
+class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
 
   final String title;
@@ -72,4 +71,3 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
-*/
