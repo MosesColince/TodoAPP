@@ -150,3 +150,79 @@ class _LoginScreenState extends State<LoginScreen> {
             )));
   }
 
+  Widget buildSignUpButton() {
+    return GestureDetector(
+      onTap: () => print("Sign up Pressed"),
+      child: RichText(
+          text: TextSpan(children: [
+        TextSpan(
+            text: "Don't have an account?",
+            style: TextStyle(
+                fontSize: 17,
+                color: Colors.black,
+                fontWeight: FontWeight.w400)),
+        TextSpan(
+            text: "Sign Up",
+            style: TextStyle(
+              fontSize: 17,
+              color: Colors.black,
+              fontWeight: FontWeight.bold,
+            ))
+      ])),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: AnnotatedRegion<SystemUiOverlayStyle>(
+        value: SystemUiOverlayStyle.light,
+        child: GestureDetector(
+          child: Stack(
+            children: <Widget>[
+              Container(
+                height: double.infinity,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        colors: [
+                      Color.fromARGB(255, 215, 224, 43),
+                      Color.fromARGB(255, 215, 224, 43),
+                      Color.fromARGB(255, 215, 224, 43),
+                      Color.fromARGB(255, 215, 224, 43),
+                    ])),
+                child: SingleChildScrollView(
+                  physics: AlwaysScrollableScrollPhysics(),
+                  padding: EdgeInsets.symmetric(horizontal: 25, vertical: 120),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      // ignore: prefer_const_constructors
+                      Text(
+                        "Sign in",
+                        style: const TextStyle(
+                            color: Color.fromARGB(255, 37, 140, 59),
+                            fontSize: 40,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      const SizedBox(height: 50),
+                      buildEmail(),
+                      SizedBox(height: 20),
+                      buildPassword(),
+                      buildForgotPassWordButton(),
+                      buildRememberbutton(),
+                      buildLoginButton(),
+                      buildSignUpButton(),
+                    ],
+                  ),
+                ),
+              )
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
