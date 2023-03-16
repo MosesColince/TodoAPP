@@ -129,4 +129,24 @@ class _LoginScreenState extends State<LoginScreen> {
         ]));
   }
 
- 
+  Widget buildLoginButton() {
+    return Container(
+        padding: EdgeInsets.symmetric(vertical: 28),
+        width: double.infinity,
+        child: RaisedButton(
+            elevation: 5,
+            onPressed: () => print("Login Pressed"),
+            padding: EdgeInsets.all(15),
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(17)),
+            color: Colors.black,
+            child: Text(
+              "Login",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 17,
+                fontWeight: FontWeight.bold,
+              ),
+            )));
+  }
+
