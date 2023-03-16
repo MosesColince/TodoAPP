@@ -10,24 +10,19 @@ class MainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text("Doctor",
-              style: TextStyle(color: Colors.orange, fontSize: 45)),
-          shape: RoundedRectangleBorder(
-              borderRadius: BorderRadiusDirectional.vertical(
-                  bottom: Radius.circular(40))),
-        ),
-        body: BottomAppBar(
-          child: ElevatedButton(
-            child: const Text("Doctor"),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => LoginScreen()),
-              );
-            },
-          ),
-        ),
+      appBar: AppBar(
+        title: const Text("Doctor"),
+      ),
+      body: Center(
+        child: ElevatedButton(
+        child: const Text("Doctor"),
+        onPressed: () {
+          Navigator.push(context,
+           MaterialPageRoute(builder: (context) => LoginScreen()),
+          );
+        },
+      ),
+      ),
     ); //title: Text(MyApp.title),
   }
 }
