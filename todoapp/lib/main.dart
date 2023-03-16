@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:todoapp/loginscreen/doctorlogin.dart';
 import 'model/global.dart';
 import 'loginscreen/doctorlogin.dart';
+import 'mainscreen.dart';
 //import 'loginscreen/patientlogin.dart';
 
 void main() {
@@ -17,6 +19,11 @@ class MyApp extends StatelessWidget {
     // ignore: prefer_const_constructors
     return MaterialApp(
       title: 'todoapp',
+      theme: ThemeData(primarySwatch: Colors.pink
+      ),
+      home: mainscreen();
+     // home: LoginScreen(),
+      
     
     );
   }
