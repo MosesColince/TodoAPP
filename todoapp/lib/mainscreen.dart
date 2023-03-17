@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:todoapp/main.dart';
 import 'loginscreen/doctorlogin.dart';
 import 'patientlogin.dart';
 
@@ -9,17 +8,22 @@ class MainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-      floatingActionButton: Container(
-        height: 70,
-        margin: const EdgeInsets.all(10),
-      ),
+
+      //floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      //floatingActionButton: Container(
+      //  height: 70,
+      //  margin: const EdgeInsets.all(5),
+      //  width: double.infinity,
+      //  ),
       appBar: AppBar(
         title: const Text("Select the correct specification"),
       ),
       body: Center(
+         //child: Align(
+
         child: Column(
           children: [
+           // Align(alignment: Alignment.bottomCenter),
             ElevatedButton(
               onPressed: () {
                 print("Doctor button pressed");
@@ -51,40 +55,4 @@ class MainScreen extends StatelessWidget {
   }
 }
 
-      /*
-      color: Colors.white,
-      home: SafeArea(
-        child: DefaultTabController(
-          length: 2,
-          child: Scaffold(
-            body: TabBarView(
-              children: [
-                Container(
-                  color: Colors.deepPurple,
-                ),
-                Container(
-                  color: Colors.redAccent,
-                ),
-              ],
-            ),
-            bottomNavigationBar: const TabBar(
-              tabs: [
-                Tab(
-                  icon: Icon(Icons.home),
-                ),
-                Tab(
-                  icon: Icon(Icons.settings),
-                )
-              ],
-              labelColor: Colors.black,
-              unselectedLabelColor: Colors.blue,
-              indicatorPadding: EdgeInsets.all(5.5),
-            ),
-            backgroundColor: Colors.purpleAccent,
-          ),
-        ),
-      ),
-    );
-  }
-}
-    */     
+     

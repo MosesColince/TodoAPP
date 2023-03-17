@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:todoapp/loginscreen/doctorlogin.dart';
-import 'model/global.dart';
-import 'loginscreen/doctorlogin.dart';
 import 'mainscreen.dart';
-//import 'loginscreen/patientlogin.dart';
+
 
 void main() {
   runApp(const MaterialApp(
