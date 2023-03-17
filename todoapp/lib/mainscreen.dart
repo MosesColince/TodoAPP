@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:todoapp/main.dart';
 import 'loginscreen/doctorlogin.dart';
+import 'patientlogin.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({super.key});
@@ -8,6 +9,11 @@ class MainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButton: Container(
+        height: 70,
+        margin: const EdgeInsets.all(10),
+      ),
       appBar: AppBar(
         title: const Text("Select the correct specification"),
       ),
@@ -28,6 +34,10 @@ class MainScreen extends StatelessWidget {
             ElevatedButton(
               onPressed: () {
                 print("Patient button selected");
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => PatientLoginScreen()));
               },
               style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(

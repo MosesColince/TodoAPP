@@ -16,7 +16,7 @@ class _LoginScreenState extends State<LoginScreen> {
     return Container(
       alignment: Alignment.centerRight,
       child: FlatButton(
-        onPressed: () => print("Forgot Password pressed"),
+        onPressed: () => print("Forgot Password Button pressed"),
         padding: EdgeInsets.only(right: 0),
         child: Text(
           "Forgot Password?",
@@ -135,7 +135,7 @@ class _LoginScreenState extends State<LoginScreen> {
         width: double.infinity,
         child: RaisedButton(
             elevation: 5,
-            onPressed: () => print("Login Pressed"),
+            onPressed: () => print("Login Button Pressed"),
             padding: EdgeInsets.all(15),
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(17)),
@@ -152,7 +152,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
   Widget buildSignUpButton() {
     return GestureDetector(
-      onTap: () => print("Sign up Pressed"),
+      onTap: () => print("Registering Pressed"),
       child: RichText(
           text: TextSpan(children: [
         TextSpan(
@@ -162,7 +162,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 color: Colors.black,
                 fontWeight: FontWeight.w400)),
         TextSpan(
-            text: "Sign Up",
+            text: "Register",
             style: TextStyle(
               fontSize: 17,
               color: Colors.black,
@@ -201,7 +201,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     children: <Widget>[
                       // ignore: prefer_const_constructors
                       Text(
-                        "Sign in",
+                        "Doctor's Sign In",
                         style: const TextStyle(
                             color: Color.fromARGB(255, 37, 140, 59),
                             fontSize: 40,

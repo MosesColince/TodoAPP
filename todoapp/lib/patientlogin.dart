@@ -1,14 +1,16 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 // ignore: use_key_in_widget_constructors
-class LoginScreen extends StatefulWidget {
+class PatientLoginScreen extends StatefulWidget {
   @override
   // ignore: library_private_types_in_public_api
-  _LoginScreenState createState() => _LoginScreenState();
+  _PatientLoginScreenState createState() => _PatientLoginScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _PatientLoginScreenState extends State<PatientLoginScreen> {
   bool isRememberMe = false;
   Widget buildForgotPassWordButton() {
     return Container(
@@ -133,7 +135,7 @@ class _LoginScreenState extends State<LoginScreen> {
         width: double.infinity,
         child: RaisedButton(
             elevation: 5,
-            onPressed: () => print("Login Pressed"),
+            onPressed: () => print("Login Button Pressed"),
             padding: EdgeInsets.all(15),
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(17)),
@@ -150,7 +152,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
   Widget buildSignUpButton() {
     return GestureDetector(
-      onTap: () => print("Sign up Pressed"),
+      onTap: () => print("Register Button Pressed"),
       child: RichText(
           text: TextSpan(children: [
         TextSpan(
@@ -160,7 +162,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 color: Colors.black,
                 fontWeight: FontWeight.w400)),
         TextSpan(
-            text: "Sign Up",
+            text: "Register",
             style: TextStyle(
               fontSize: 17,
               color: Colors.black,
@@ -199,7 +201,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     children: <Widget>[
                       // ignore: prefer_const_constructors
                       Text(
-                        "Sign in",
+                        "Patients Sign In",
                         style: const TextStyle(
                             color: Color.fromARGB(255, 37, 140, 59),
                             fontSize: 40,
