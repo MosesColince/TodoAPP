@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 import 'package:todoapp/main.dart';
 import 'loginscreen/doctorlogin.dart';
@@ -11,17 +9,33 @@ class MainScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Doctor"),
+        title: const Text("Select the correct specification"),
       ),
       body: Center(
-        child: ElevatedButton(
-        child: const Text("Doctor"),
-        onPressed: () {
-          Navigator.push(context,
-           MaterialPageRoute(builder: (context) => LoginScreen()),
-          );
-        },
-      ),
+        child: Column(
+          children: [
+            ElevatedButton(
+              onPressed: () {
+                print("Doctor button pressed");
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => LoginScreen()));
+              },
+              style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30))),
+              child: Text("Doctor"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                print("Patient button selected");
+              },
+              style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30))),
+              child: Text("Patient"),
+            ),
+          ],
+        ),
       ),
     ); //title: Text(MyApp.title),
   }

@@ -8,7 +8,7 @@ import 'mainscreen.dart';
 void main() {
   runApp(const MaterialApp(
     title: "todoapp",
-    home: MainScreen()
+    home: MainScreen(),
   ));
 }
 
