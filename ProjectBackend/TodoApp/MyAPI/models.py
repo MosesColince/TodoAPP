@@ -7,6 +7,7 @@ class Todowork(models.Model):
     desc = models.CharField(max_length= 220)
     title = models.CharField(max_length= 60)
     
+    
 def __str__(self):
     return self.title[:17]
    
