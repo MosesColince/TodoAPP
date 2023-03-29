@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'mininotes.dart';
+// ignore: import_of_legacy_library_into_null_safe
 import 'package:auto_size_text/auto_size_text.dart';
 
 class NotesPage extends StatefulWidget {
@@ -315,12 +316,12 @@ class _NotesPageState extends State<NotesPage> {
                           ),
                           prefixIcon: Icon(Icons.text_fields),
                         ),
-                       validator: (String noteHeading) {
+                        validator: (String noteHeading) {
                           if (noteHeading.isEmpty) {
                             return "Please enter Note Heading";
                           } else if (noteHeading.startsWith(" ")) {
                             return "Please avoid whitespaces",
-                          };
+                          }
                         },
                         onFieldSubmitted: (String value) {
                           FocusScope.of(context)
