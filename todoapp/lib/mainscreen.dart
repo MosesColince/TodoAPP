@@ -8,22 +8,20 @@ class MainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      
 
-      //floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-      //floatingActionButton: Container(
-      //  height: 70,
-      //  margin: const EdgeInsets.all(5),
-      //  width: double.infinity,
-      //  ),
-      appBar: AppBar(
-        title: const Text("Select the correct specification"),
-      ),
-      body: Center(
-         //child: Align(
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButton: Container(
+        height: 70,
+        margin: const EdgeInsets.all(10),
+        
+ 
+       
+       
 
         child: Column(
           children: [
-           // Align(alignment: Alignment.bottomCenter),
+            //Align(alignment: Alignment.bottomCenter),
             ElevatedButton(
               onPressed: () {
                 print("Doctor button pressed");
@@ -31,28 +29,40 @@ class MainScreen extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => LoginScreen()));
               },
               style: ElevatedButton.styleFrom(
+                  elevation: 10,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30))),
-              child: Text("Doctor"),
+              child: const Center(
+                child: Text("Doctor"),
+              ),
+            ),
+            Spacer(
+              flex: 2,
             ),
             ElevatedButton(
               onPressed: () {
                 print("Patient button selected");
                 Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => PatientLoginScreen()));
+                  context,
+                  MaterialPageRoute(builder: (context) => PatientLoginScreen()) ,
+                );
               },
               style: ElevatedButton.styleFrom(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(30))),
-              child: Text("Patient"),
+                elevation: 10,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30)),
+              ),
+              child: const Center(
+                child: Text("Patient"),
+              ),
             ),
           ],
         ),
       ),
-    ); //title: Text(MyApp.title),
+    );
+    // ),
+    //  );
+
+    // ), //title: Text(MyApp.title),
   }
 }
-
-     

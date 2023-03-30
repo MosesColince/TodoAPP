@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
+import 'package:todoapp/mainscreen.dart';
 // ignore: use_key_in_widget_constructors
 class LoginScreen extends StatefulWidget {
   @override
@@ -175,6 +175,15 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+           title: const Text("Return to Main Page"),
+           leading: BackButton(
+            onPressed: () => Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => MainScreen())
+                    ),
+                    ),
+           ),
+          
       body: AnnotatedRegion<SystemUiOverlayStyle>(
         value: SystemUiOverlayStyle.light,
         child: GestureDetector(
