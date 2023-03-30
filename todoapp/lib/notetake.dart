@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'mininotes.dart';
-// ignore: import_of_legacy_library_into_null_safe
 import 'package:auto_size_text/auto_size_text.dart';
 
 class NotesPage extends StatefulWidget {
@@ -106,7 +105,8 @@ class _NotesPageState extends State<NotesPage> {
                       ),
                     ),
                   );
-                });
+                }
+                );
               },
               background: ClipRRect(
                 borderRadius: BorderRadius.circular(5.5),
@@ -270,11 +270,10 @@ class _NotesPageState extends State<NotesPage> {
                           ),
                           GestureDetector(
                             onTap: () {
-                              if (_formKey.currentState.validate()) {
+                              if (_formKey.currentState!.validate()) {
                                 setState(() {
                                   noteHeading.add(noteHeadingController.text);
-                                  noteDescription
-                                      .add(noteDescriptionController.text);
+                                  noteDescription.add(noteDescriptionController.text);
                                   noteHeadingController.clear();
                                   noteDescriptionController.clear();
                                 });
@@ -315,14 +314,14 @@ class _NotesPageState extends State<NotesPage> {
                             fontWeight: FontWeight.w500,
                           ),
                           prefixIcon: Icon(Icons.text_fields),
-                        ),
+                        ),/*
                         validator: (String noteHeading) {
                           if (noteHeading.isEmpty) {
                             return "Please enter Note Heading";
                           } else if (noteHeading.startsWith(" ")) {
                             return "Please avoid whitespaces",
                           }
-                        },
+                        },*/
                         onFieldSubmitted: (String value) {
                           FocusScope.of(context)
                               .requestFocus(textSecondFocusNode);
@@ -346,14 +345,14 @@ class _NotesPageState extends State<NotesPage> {
                                 color: Colors.grey,
                                 fontWeight: FontWeight.w500,
                               ),
-                            ),
+                            ),/*
                             validator: (String noteDescription) {
                               if (noteDescription.isEmpty) {
                                 return "Please enter Note Desc";
                               } else if (noteDescription.startsWith(" ")) {
                                 return "Please avoid whitespaces";
                               }
-                            },
+                            },*/
                           ),
                         ),
                       ),
