@@ -12,8 +12,9 @@ class MainScreen extends StatelessWidget {
 
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: Container(
-        height: 70,
-        margin: const EdgeInsets.all(10),
+        height: 200,
+       
+        margin: const EdgeInsets.all(8),
         
  
        
@@ -29,11 +30,12 @@ class MainScreen extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => LoginScreen()));
               },
               style: ElevatedButton.styleFrom(
-                  elevation: 10,
+                  elevation: 70,
+                  
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30))),
               child: const Center(
-                child: Text("Doctor"),
+                child: Text("Doctor's Sign In"),
               ),
             ),
             Spacer(
@@ -53,16 +55,13 @@ class MainScreen extends StatelessWidget {
                     borderRadius: BorderRadius.circular(30)),
               ),
               child: const Center(
-                child: Text("Patient"),
+                child: Text("Patient's Sign In"),
               ),
             ),
           ],
         ),
       ),
     );
-    // ),
-    //  );
-
-    // ), //title: Text(MyApp.title),
+    //title: Text(MyApp.title),
   }
 }
